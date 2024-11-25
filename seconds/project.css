@@ -1,0 +1,277 @@
+:root{
+    --colorblue:rgb(36, 40, 52);
+    --colorlight: antiquewhite;
+}
+
+body {
+    direction: rtl;
+    box-sizing: border-box;
+    text-align: right;
+    margin: 0px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    background-color: var(--colorblue);
+}
+
+#menu {
+    display: flex;
+    list-style: none;
+}
+
+#menu a {
+    padding: 30px;
+    text-decoration: none;
+    color: var(--colorlight);
+
+}
+
+header img {
+    padding-right: 20px;
+}
+
+.list {
+    display: none;
+    position: absolute;
+    list-style: none;
+    color: var(--colorblue);
+    background-color: aliceblue;
+
+}
+
+li:hover .list {
+    display: block;
+}
+
+#humburger {
+    display: none;
+}
+
+/*עד כאן ראש העמוד*/
+main {
+    z-index: -1;
+    position: relative;
+    top: 103px;
+    height: 2500px;
+    background-color:var(--colorblue);
+}
+
+
+.builds {
+
+    width: 100%;
+    margin-bottom: 100px;
+    padding: 50px;
+
+
+}
+
+.builds img {
+    width: 70%;
+}
+
+.include {
+    display: flex;
+    height: 400px;
+    width: 100%;
+}
+
+.p {
+    width: 30%;
+    background-color: var(--colorlight);
+    color: black;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.p p {
+    font-size: 40px;
+    text-decoration: dashed;
+    font-style: italic;
+}
+
+
+
+
+
+/*פוטר*/
+footer {
+    background-image: url(../images/footer.png);
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+#column1 {
+
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#column1 a {
+    display: block;
+    list-style: none;
+    width: 200px;
+    margin: 30px;
+    padding: 3px;
+    border: 2px solid var(--colorlight);
+    border-radius: 30px;
+    text-align: center;
+    transition-property:all ;
+    transition-duration: 0.5s;
+    text-decoration: none;
+    color:var(--colorlight);
+}
+
+#column1 a:hover {
+    background-color: var(--colorblue);
+    transform: scale(1.2);
+}
+
+
+
+#column2 {
+    color: var(--colorlight);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    line-height: 2;
+}
+
+#titlecolumn2 {
+    text-decoration: dashed;
+    font-size: 30px;
+
+}
+
+#column2 p a {
+    text-decoration: none;
+    color: var(--colorlight);
+}
+
+#column2 p a:before {
+    display: inline-block;
+    content: url(../images/gifmail.png);
+    transform: translateY(10px);
+}
+
+#callcolumn2:before {
+    display: inline-block;
+    content: url(../images/gifcall.png);
+    transform: translateY(10px);
+
+}
+
+#column3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+
+}
+
+@media(max-width: 1000px) {
+
+    #column3 {
+        display: none;
+    }
+
+    .include {
+        display: block;
+        width: 80%;
+        height: 400px;
+
+    }
+
+    main {
+        height: 2000px;
+    }
+
+    .builds {
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+        height: 600px;
+    }
+
+    .p {
+        width: 100%;
+        height: 40%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .include img {
+        width: 100%;
+        height: 60%;
+        max-width: 100%;
+        height: auto;
+
+    }
+
+}
+
+@media(max-width:800px) {
+
+    #column2 {
+        display: none;
+    }
+
+    #column1 {
+        width: 100%;
+    }
+
+    .builds {
+
+        height: 350px;
+    }
+
+    main {
+        height: 1700px;
+    }
+
+}
+@media (max-width:780px) {
+    
+
+    .lines {
+
+        height: 4px;
+        width: 30px;
+        background-color: var(--colorblue);
+        ;
+        margin: 3px;
+        border-radius: 50px;
+    }
+
+    #humburger {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: var(--colorlight);
+        border: 1px solid var(--colorlight);
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 10%;
+    }
+    header nav{
+        display: none;
+    }
+
+}

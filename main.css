@@ -1,0 +1,272 @@
+:root{
+    --colorblue:rgb(36, 40, 52);
+    --colorlight: antiquewhite;
+}
+body {
+    direction: rtl;
+    box-sizing: border-box;
+    text-align: right;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+}
+
+#menu {
+    display: flex;
+    list-style: none;
+}
+
+#menu a {
+    padding: 30px;
+    text-decoration: none;
+   color: var(--colorlight);
+
+}
+
+header img {
+    padding-right: 20px;
+}
+
+.list {
+    display: none;
+    position: absolute;
+    list-style: none;
+    color: var(--colorblue);
+    background-color: aliceblue;
+
+}
+
+li:hover .list {
+    display: block;
+}
+
+#humburger {
+    display: none;
+}
+
+/*עד כאן ראש העמוד*/
+#a1 {
+
+    width: 100%;
+    z-index: -1;
+    position: relative;
+    align-content: end;
+}
+
+#a1 img {
+    width: 100%;
+    height: 100%;
+}
+
+
+#a1 div p {
+    z-index: 1;
+    position: absolute;
+    font-size: 40px;
+    text-decoration: dashed;
+    color:var(--colorlight);
+    font-style: italic;
+    text-align: center;
+    top: 120px;
+    right: 85px;
+    font-family: "cursive";
+    line-height: 1;
+
+}
+
+#a1 div p span {
+    font-weight: lighter;
+    font-size: 80px;
+
+}
+
+/*חלק שני של העמוד*/
+
+#a2 {
+
+    background-color: var(--colorblue);
+    color: var(--colorlight);
+    display: flex;
+    width: 100%;
+}
+
+.row {
+    width: 100%;
+}
+
+#secondtitle {
+    text-decoration: dashed;
+    font-size: 40px;
+}
+
+#secondtitle:after {
+    content: '___________ ';
+    display: block;
+    width: 20px;
+    height: 2px;
+    color: var(--colorlight);
+    transform: translateY(-40px);
+}
+
+#secondimages #outimg div {
+    display: flex;
+}
+
+#secondimages img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin: 40px;
+
+
+}
+
+/*פוטר*/
+footer {
+    background-image: url(images/footer.png);
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#column1 {
+
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#column1 a {
+    display: block;
+    list-style: none;
+    margin: 30px;
+    border: 2px solid var(--colorlight);
+    border-radius: 30px;
+    text-align: center;
+    padding: 3px;
+    width: 200px;
+   
+    transition-property:all ;
+    transition-duration: 0.5s;
+    text-decoration: none;
+    color: var(--colorlight);
+
+}
+
+#column1 a:hover {
+    background-color: var(--colorblue);
+    transform: scale(1.2);
+
+}
+
+
+
+#column2 {
+    color: var(--colorlight);
+    ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 2;
+}
+
+#titlecolumn2 {
+    text-decoration: dashed;
+    font-size: 30px;
+
+}
+
+#column2 p a {
+    text-decoration: none;
+    color:var(--colorlight);
+    
+}
+
+#column2 p a:before {
+    display: inline-block;
+    content: url(images/gifmail.png);
+    transform: translateY(10px);
+}
+
+#callcolumn2:before {
+    display: inline-block;
+    content: url(images/gifcall.png);
+    transform: translateY(10px);
+
+}
+
+#column3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+@media(max-width: 1000px) {
+    #a1 div {
+        display: none;
+    }
+
+    #column3 {
+        display: none;
+    }
+
+
+}
+
+@media(max-width:600px) {
+
+    #column2 {
+        display: none;
+    }
+    #column1{
+        width: 100%;
+    }
+
+    #secondimages img {
+        margin: 10px;
+        width: 140px;
+        height: 150px;
+
+    }
+}
+@media (max-width:780px) {
+    
+
+    .lines {
+
+        height: 4px;
+        width: 30px;
+        background-color: var(--colorblue);
+        margin: 3px;
+        border-radius: 50px;
+    }
+
+    #humburger {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: var(--colorlight);
+        border: 1px solid var(--colorlight);
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 10%;
+    }
+    header nav{
+        display: none;
+    }
+
+}
+

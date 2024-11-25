@@ -1,0 +1,239 @@
+:root{
+    --colorblue:rgb(36, 40, 52);
+    --colorlight: antiquewhite;
+}
+body{
+    direction: rtl;
+    box-sizing: border-box;
+    text-align: right;
+    margin: 0px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    background-color:var(--colorblue);
+z-index: 2;
+}
+
+#menu {
+    display: flex;
+    list-style: none;
+}
+
+#menu a {
+    padding: 30px;
+    text-decoration: none;
+    color:var(--colorlight);
+
+}
+
+header img {
+    padding-right: 20px;
+}
+
+.list {
+    display: none;
+    position: absolute;
+    list-style: none;
+    color:var(--colorblue);
+    
+    background-color: aliceblue;
+
+}
+
+li:hover .list {
+    display: block;
+    
+}
+
+#humburger {
+    display: none;
+}
+/*עד כאן ראש העמוד*/
+main{
+    top: 102px;
+    position: relative;
+    background-image: url(../images/connectImg.png);
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../images/connectImg.png);
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 900px;
+    width: 100%;
+    z-index: 0;
+    display: flex;
+    justify-content: space-around;
+}
+   
+
+form{
+    display: flex;
+    flex-flow: column;
+    width: 200px;
+    position: relative;
+    top: 10%;   
+}
+main p{
+    z-index: 1;
+    position: absolute;
+    font-size: 70px;
+    text-decoration: dashed;
+    color:var(--colorlight);
+    font-style: italic;
+    text-align: center;
+    top: 10%;
+    font-family: "cursive";
+    line-height: 1;
+   
+}
+main  p span{
+    font-weight: lighter;
+    font-size: 130px;
+  
+}
+/*עד כאן הראשי*/
+footer{
+    position: relative;
+    background-image: url(../images/footer.png);  
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    z-index: 2;
+ 
+
+  }
+  #column1{
+      
+      width: 30%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+  #column1 a {
+  display: block;
+      list-style: none;
+      width: 200px;
+      margin: 30px;
+      padding: 3px;
+      border: 2px solid var(--colorlight);
+      border-radius: 30px;
+       text-align: center;
+       transition-property:all ;
+    transition-duration: 0.5s;
+    text-decoration: none;
+    color:var(--colorlight);
+  }
+  
+  #column1 a:hover{
+      background-color:var(--colorblue);
+      transform: scale(1.2);
+  }
+  
+  #column2{
+    color:var(--colorlight);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 30%;
+      line-height: 2;
+  }
+  #titlecolumn2{
+      text-decoration: dashed;
+      font-size: 30px;
+  
+  }
+  
+  #column2 p a{
+      text-decoration: none;
+      color:var(--colorlight);
+    }
+  #column2 p a:before{
+      display: inline-block;
+      content: url(../images/gifmail.png);
+      transform: translateY(10px);
+  }
+  #callcolumn2:before{
+      display: inline-block;
+      content: url(../images/gifcall.png);
+      transform: translateY(10px);
+  
+  }
+  #column3{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30%;
+  
+  }
+
+
+@media(max-width: 1100px){
+    
+    main div p{
+        font-size: 40px;
+    }
+    main div p span{
+        font-size: 80px;
+    }
+    
+    #column3{
+        display: none;
+    }
+
+
+}
+@media(max-width:770px){
+ main div{
+    display: none;
+ }
+   
+}
+@media(max-width:600px){
+   
+    #column2{
+        display: none;
+    }
+    #column1{
+        width: 100%;
+    }
+   
+}
+@media (max-width:780px) {
+    
+
+    .lines {
+
+        height: 4px;
+        width: 30px;
+        background-color: rgb(3, 13, 53);
+        
+        margin: 3px;
+        border-radius: 50px;
+    }
+
+    #humburger {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color:var(--colorlight);
+        
+        border: 1px solid var(--colorlight);
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 10%;
+    }
+    header nav{
+        display: none;
+    }
+
+}

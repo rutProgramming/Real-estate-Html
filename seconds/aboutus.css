@@ -1,0 +1,287 @@
+:root{
+    --colorblue:rgb(36, 40, 52);
+    --colorlight: antiquewhite;
+}
+body{
+    position: relative;
+    direction: rtl;
+    box-sizing: border-box;
+    text-align: right;
+    margin: 0px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    background-color:var(--colorblue);
+    z-index: 3;
+}
+
+#menu {
+    display: flex;
+    list-style: none;
+}
+
+#menu a {
+    padding: 30px;
+    text-decoration: none;
+    color:var(--colorlight);
+
+}
+
+header img {
+    padding-right: 20px;
+}
+
+.list {
+    display: none;
+    position: absolute;
+    list-style: none;
+    color:var(--colorblue);
+    background-color: aliceblue;
+
+}
+
+li:hover .list {
+    display: block;
+}
+
+#humburger {
+    display: none;
+}
+/*עד כאן ראש העמוד*/
+
+
+
+
+main{
+   position: relative;
+   z-index: -5;
+   height: 1800px;
+}
+.row{
+    margin: 0;
+}
+#aside{
+    padding-top: 100px;
+    position: sticky;
+    top: 90px;
+    align-self: start;
+
+}
+#aside p{
+    color:var(--colorlight);
+    text-align: center;
+}
+
+.icon{
+ width: 100px;
+ height: 100px; 
+}
+
+#underaside{
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+   
+}
+#picture{
+    width: 80%;
+}
+
+#picture:after{
+contain:'';
+width: 100%;
+height: 100%;
+position: absolute;
+background-color: #fff;
+
+}
+#a1{
+    position: relative;
+    top:100px;
+    display: flex;
+    height: 1700px;
+    width: 100%;
+    background-color:var(--colorblue);
+    
+}
+#text{
+    margin-bottom: 100px;
+    margin-right: 100px;
+    text-align: center;
+}
+#text p{
+    font-size: 40px;
+    text-decoration: dashed;
+    color:var(--colorlight);
+    font-style: italic;
+    font-family: "cursive";
+    line-height: 1;
+}
+#text  p span{
+    font-weight: lighter;
+    font-size: 80px;
+}
+#picture img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 50px;
+}
+/*פוטר*/
+footer{
+    position: relative;
+    background-image: url(../images/footer.png);  
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    z-index: 2;
+
+  }
+  #column1{
+      
+      width: 30%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+  #column1 a {
+  display: block;
+      list-style: none;
+      width: 200px;
+      margin: 30px;
+      padding: 3px;
+      border: 2px solid var(--colorlight);
+      border-radius: 30px;
+       text-align: center;
+       transition-property:all ;
+       transition-duration: 0.5s;
+       text-decoration: none;
+       color:var(--colorlight);
+  }
+  
+  #column1 a:hover{
+      background-color: var(--colorblue);
+      transform: scale(1.2);
+  }
+  
+  
+  #column2{
+    color:var(--colorlight);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 30%;
+      line-height: 2;
+  }
+  #titlecolumn2{
+      text-decoration: dashed;
+      font-size: 30px;
+  
+  }
+  
+  #column2 p a{
+      text-decoration: none;
+      color:var(--colorlight);
+    }
+  #column2 p a:before{
+      display: inline-block;
+      content: url(../images/gifmail.png);
+      transform: translateY(10px);
+  }
+  #callcolumn2:before{
+      display: inline-block;
+      content: url(../images/gifcall.png);
+      transform: translateY(10px);
+  
+  }
+  #column3{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30%;
+  
+  }
+ 
+@media(max-width: 1000px){
+   
+    #column3{
+        display: none;
+    }
+    
+}
+@media(max-width:800px){
+ 
+    #column2{
+        display: none;
+    }
+    #column1{
+        width: 100%;
+    }
+   
+}
+@media (max-width:576px){
+main{
+    height: 1100px;
+}
+    .icon{
+     width: 50px;
+    height: 50px;
+}
+ aside p{
+     font-size: 10px;
+}
+#a1{
+    height: 1000px;
+}
+#text{
+   margin-bottom: 50px;
+   margin-right: 0px;
+}
+ #text p{
+    font-size: 25px;
+ 
+ }
+ #text p span{
+    font-size: 50px;
+ 
+ }
+}
+@media (max-width:780px) {
+    
+
+    .lines {
+
+        height: 4px;
+        width: 30px;
+        background-color: var(--colorblue);
+        ;
+        margin: 3px;
+        border-radius: 50px;
+    }
+
+    #humburger {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: var(--colorlight);
+        border: 1px solid var(--colorlight);
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 10%;
+    }
+    header nav{
+        display: none;
+    }
+
+}

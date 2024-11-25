@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>אורבן בע"מ</title>
+    <link rel="stylesheet" href="../bootstrap.min.css">
+    <link rel="stylesheet" href="conect.css">
+</head>
+
+<body>
+    <header>
+        <img src="../images/logo.png" alt="logo">
+        <nav>
+            <ul id="menu">
+                <li>
+                    <a href="../main.html" id="main">ראשי
+
+                    </a>
+                    <ul class="list">
+                        <li>אנחנו</li>
+                        <li>בתים למכירה</li>
+                        <li>אודות הערים </li>
+                    </ul>
+                </li>
+                <li><a href="../seconds/aboutus.html">אודות</a>
+                    <ul class="list" id="second">
+                        <li>אודות שוק הנדל"ן</li>
+                        <li>עלינו</li>
+                        <li>אודות הערים </li>
+                    </ul>
+                </li>
+                <li><a href="../seconds/project.html">פרויקטים</a>
+                    <ul class="list" id="third">
+                        <li>נס ציונה</li>
+                        <li>רעננה</li>
+                        <li>פרויקט בוטיק</li>
+                        <li> תל אביב מרכז</li>
+                    </ul>
+                </li>
+
+                <li><a href="../seconds/conect.html">ליצירת קשר</a>
+                    <ul class="list" id="fourth">
+                        <li>מוקד בני ברק </li>
+                        <li> מוקד רעננה </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <button id="humburger">
+            <div class="lines">
+            </div>
+            <div class="lines">
+            </div>
+            <div class="lines">
+            </div>
+        </button>
+    </header>
+    <main>
+            <div>
+                <p>
+                    private <br><span>designer</span> <br>for each <br><span>family</span>
+                </p>
+            </div>
+            <form>
+                <label id="p_privateName">שם פרטי</label>
+                <input for="p_privateName" type="text" name="privateName" required placeholder="שם פרטי">
+                <label>שם משפחה</label>
+                <input type="text" name="fimilyName" required placeholder="שם משפחה">
+
+                <label id="c_city">עיר</label>
+                <select name="city" for="c_city">
+                    <option disabled selected>
+                        בחר</option>
+                    <option value="בני ברק">
+                        בני ברק</option>
+                    <option value="ירושלים">
+                        ירושלים</option>
+                    <option value="פתח תקווה">
+                        פתח תקווה</option>
+                    <option value="רעננה">
+                        רעננה</option>
+                </select>
+                <label id="p_phone">טלפון</label>
+                <input for="p_phone" type="tel" name="phone" required placeholder="טלפון">
+                <label id="e_email">מייל</label>
+                <input for="e_email" type="email" name="mail" required placeholder="מייל">
+                <fieldset>
+                    <legend>באיזה אופן נחזור אליך?</legend>
+                    <div>
+                        <input type="radio" name="connect" id="email" value="1" />
+                        <label for="email"> מייל</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="connect" id="tel" value="1" />
+                        <label for="tel"> טלפון</label>
+                    </div>
+                </fieldset>
+                <button type="submit">שלח</button>
+            </form>
+        
+    </main>
+
+
+    <footer>
+
+        <nav id="column1">
+            <ul>
+                <li><a href="../main.html">דף הבית</a></li>
+                <li><a href="../seconds/aboutus.html">אודות</a></li>
+                <li><a href="../seconds/project.html">פרוייקטים</a></li>
+                <li><a href="../seconds/conect.html">צרו קשר</a></li>
+            </ul>
+        </nav>
+        <div id="column2">
+            <p><span id="titlecolumn2">אור זלקוביץ, נכסים ויזמות נדל״ן</span>
+                <br />
+                <br />
+                <span id="callcolumn2"> טל׳: 054-2300005
+                </span>
+                <br />
+                <a href="#">מייל: or@urban-young.co.il</a>
+
+            </p>
+
+
+
+
+        </div>
+        <div id="column3">
+            <img src="../images/logo.png" alt="logo">
+        </div>
+    </footer>
+
+</body>
+
+</html>
